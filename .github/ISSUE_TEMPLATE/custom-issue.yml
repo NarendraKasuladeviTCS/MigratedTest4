@@ -1,0 +1,41 @@
+name: Custom Issue
+description: Submit a structured custom issue
+title: "[Custom] "
+labels: ["custom"]
+body:
+  - type: input
+    id: issue_title
+    attributes:
+      label: "Issue Title"
+      placeholder: "Enter a brief title"
+    validations:
+      required: true
+
+  - type: textarea
+    id: issue_description
+    attributes:
+      label: "Description"
+      description: "Provide a detailed description of the issue"
+      placeholder: "Describe the issue..."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: "Priority Level"
+      options:
+        - Low
+        - Medium
+        - High
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: "Checklist"
+      options:
+        - label: "I have searched for existing issues"
+          required: true
+        - label: "I have provided all necessary details"
